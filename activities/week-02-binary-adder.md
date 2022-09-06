@@ -69,15 +69,18 @@ which binary system can represent more numbers:
 unsigned or two's complement signed?
 Explain.
 
-5. Assume you have built an adder that computes the sum of two unsigned 16-bit
+5. What is the decimal equivalent of the *signed* binary number `1101_2`?
+
+6. Assume you have built an adder that computes the sum of two unsigned 16-bit
 binary numbers.
 How would you modify your adder to produce the sum of two signed 16-bit binary
 numbers.
+(Hint: this is a trick question,
+and it does not require you to know how to build a 16-bit adder yet.
+*Why* is it a trick question?)
 
-6. What is the decimal equivalent of the *signed* binary number `1101_2`?
-
-7. Given your previous answer,
-for each system,
+7. Consider 4-bit unsigned numbers and 4-bit two's complement numbers.
+For both numbering systems,
 provide an example of two binary numbers that result in overflow when added.
 
 8. Consider the following operation: `1101_2 + 0111_2`.
@@ -90,10 +93,33 @@ Would the operation overflow using
 except in powers of two.
 This is just for circuit design practice.)
 
-10. A 16-bit adder is still a combinational circuit because its outputs depend
-only on its inputs.
-How many rows would there be in the truth table for a 16-bit adder?
-Don't forget about the carry in.
+10. Consider an infitely large two-dimensional grid
+    (the "XY plane" from math class).
+    ```
+    * * * * * | * * * * *
+    * * * * * | * * * * *
+    * * * * * | * * * * *
+    * * * * * | * * * * *
+    * * * * * | * * * * *
+    ----------+----------
+    * * * * * | * * * * *
+    * * * * * | * * * * *
+    * * * * * | * * * * *
+    * * * * * | * * * * *
+    * * * * * | * * * * *
+    ```
+    If we want to be able to get to any location on the grid,
+    we can use combinations of just a few arrows:
+    up, left, right, and down.
+    For example, to get to the point `(2, 3)`,
+    we would need 2 up-arrows and 3 right-arrows.
+
+    Because we can get anywhere with these four arrows,
+    we will call them a "directionally complete" set.
+    Consider another set of arrows:
+    up, left, down, and up-right,
+    where up-right moves you up one spot and right one spot.
+    Prove that this second set is also "directionally complete".
 
 11. Prove that the set `{AND, NOT}` is logically complete.
 
@@ -101,3 +127,8 @@ Don't forget about the carry in.
 number 6, and `false` otherwise.
 
 13. Design a circuit that returns `true` if a four-bit input represents the number 0, and `false` otherwise.
+
+14. A 16-bit adder is still a combinational circuit because its outputs depend
+only on its inputs.
+How many rows would there be in the truth table for a 16-bit adder?
+Don't forget about the carry in.
