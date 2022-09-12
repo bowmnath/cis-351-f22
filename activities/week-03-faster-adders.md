@@ -60,6 +60,9 @@ How can the concept of a critical path help you in this situation?
 * A'BC + A'B'C + A'BC'
 
 9. Write the truth table for a full adder.
+   Try to write it without looking at your notes.
+   You do not need to have it memorized --
+   think about what a full adder *does*.
 
 10. Using full adders as black boxes,
 draw a ripple-carry adder.
