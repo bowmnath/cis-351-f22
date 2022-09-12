@@ -68,11 +68,11 @@ life if you know to look for it.
    draw a ripple-carry adder.
 
 11. Consider a group of full adders making up a ripple-carry adder.
-   Assume all gates have a delay of 8 nanoseconds
-   If a full adder other than the first receives its carry-in at time 64,
-   at what point can we be sure that full adder has correctly produced
-   * its sum?
-   * its carry-out?
+    Assume all gates have a delay of 8 nanoseconds
+    If a full adder other than the first receives its carry-in at time 64,
+    at what point can we be sure that full adder has correctly produced
+    * its sum?
+    * its carry-out?
 
 12. Consider the following mux and inputs.
     Note that the selector input is given in binary (hence the `B`).
