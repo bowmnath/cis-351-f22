@@ -1,25 +1,32 @@
 # General Questions
 
-2. What relatively simple test can we perform to determine whether a circuit
+1. What relatively simple test can we perform to determine whether a circuit
    is combinational?
 
-3. Is the following circuit combinational or sequential?
+2. Is the following circuit combinational or sequential?
 
    ![maybe sequential 1](images/maybe_sequential_1.jpg)
 
-4. Is the following circuit combinational or sequential?
+3. Is the following circuit combinational or sequential?
 
    ![maybe sequential 2](images/maybe_sequential_2.jpg)
 
-5. Describe in your own words the fundamental difference between combinational
+4. Describe in your own words the fundamental difference between combinational
    circuits and sequential circuits.
    (Hint: the answer is not "loops".
    Loops are how we *detect* a sequential circuit,
    but they are not a useful description of the underlying difference.)
 
-6. Why is it not possible to represent sequential circuits using truth tables?
-   <!-- Draw a sequential circuit. Try to create a truth table.
-        Why is it not possible? -->
+5. Given the circuit below,
+   try to create a truth table.
+   (Hint: it will not be possible.
+   The key is to see what happens when you try.)
+
+   ![trivial sequential](images/trivial_sequential.jpg)
+
+6. Given what happened in the previous question,
+   describe in your own words why it is not possible in general to represent
+   sequential circuits using truth tables.
 
 7. For each of the following applications,
    determine whether it could be modeled by a combinational circuit
@@ -34,6 +41,8 @@
 
 7. Can all sequential circuits be described with Boolean algebra?
    If not, can you come up with an example of why this does not work?
+   (Hint: think about the relationship we have discussed between Boolean
+   algebra and truth tables.)
 
 8. Why must an SR latch be analyzed until it converges,
    which may take several iterations through the circuit,
