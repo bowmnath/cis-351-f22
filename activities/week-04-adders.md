@@ -41,15 +41,15 @@ Note: some questions may be taken entirely or in part from your textbook.
    we are switching gears a little bit and looking *inside* the full adders).
    If a full adder other than the first receives its carry-in at time 64,
    at what point can we be sure that full adder has correctly produced
-       * its sum?
-       * its carry-out?
+   * its sum?
+   * its carry-out?
 
 9. Your lab partner wants to speed up your 16-bit adder using the following
    idea:
-       * use two 16-bit ripple-carry adders,
-         one with a carry-in of 1 and the other with a carry-in of 0
-       * attach the outputs to multiplexors and use the actual carry in as the
-         selector for the muxes
+   * use two 16-bit ripple-carry adders,
+     one with a carry-in of 1 and the other with a carry-in of 0
+   * attach the outputs to multiplexors and use the actual carry in as the
+     selector for the muxes
 
    How would you explain to them that this is a bad idea?
    How could the idea be improved?
