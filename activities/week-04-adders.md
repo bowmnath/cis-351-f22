@@ -77,3 +77,31 @@ how can you determine the carry-out for the combined 4-bit block?
 
 14. Given `G5`, `G4:0`, `P5`, `P4:0`, and a carry-in `C_in`,
 give a Boolean expression to determine `C_5`.
+
+Switching gears to K-maps...
+
+15. Consider the Boolean expression
+    ```
+    A'B'C' + A'BC' + A'B'C + AB'C
+    ```
+    Simplify this expression using a K-map.
+    You may check your work using Boolean algebra,
+    but you will need to know how to draw and circle a K-map for the exam.
+
+16. Consider the unlabeled K-map below.
+    Assuming the K-map was drawn in the standard way,
+    what is the truth table that would produce this K-map?
+    ```
+    A \ BC
+      -----------------
+      | 0 | 1 | 1 | 0 |
+      |---------------|
+      | 1 | 1 | 0 | 0 |
+      -----------------
+    ```
+
+17. Use the truth table you generated for the previous question to find a
+    sum-of-products Boolean expression.
+
+18. Using the K-map from the previous question,
+    find a simplified Boolean expression.

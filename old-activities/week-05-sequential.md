@@ -1,12 +1,5 @@
 # General Questions
 
-1. Consider the Boolean expression
-```
-A'B'C' + A'BC' + A'B'C + AB'C
-```
-Simplify this expression using a K-map.
-You may check your work using Boolean algebra,
-but you will need to know how to draw and circle a K-map for the exam.
 
 2. Describe in your own words the fundamental difference between combinational
 circuits and sequential circuits.
