@@ -89,14 +89,69 @@
     (a view of the input `D` and the clock over time)
     for which a D latch and a D flip-flop behave very differently.
 
-16. Create a circuit that stores one bit of state and takes one input.
+Here, we are switching gears to synchronous sequential circuits.
+First, though, we are going to create a combinational circuit,
+because creating a combinational circuit is often a good first step to
+creating a synchronous sequential circuit.
+
+16. Create a circuit that takes two inputs, `A` and `B`.
+    If `A` is `0`,
+    then the circuit outputs `NOT B`.
+    Otherwise, the circuit outputs `B`.
+    You can fill out a truth table and create the sum-of-products circuit,
+    but there is a simpler way to create this circuit.
+
+17. Create a circuit that stores one bit of state and takes one input.
     At the rising edge of the clock, this circuit will
-    * flip its stored bit if the input is `0`
+    * flip its stored bit (i.e., `NOT` the bit) if the input is `0`
     * keep its stored bit if the input is `1`
 
-    You may use a D flip-flop and/or D latch as a black box.
+    Note the similarity between this circuit and the circuit you created above.
+    It should be possible to create this circuit with minimal modifications
+    to the circuit above.
 
-17. Consider the following characteristic table:
+    You may use a D flip-flop as a black box.
+
+18. Consider the following characteristic table:
+
+    A   | B   | X   | Xnext
+    --- | --- | --- | --- |
+    0   | 0   | 0   | 0
+    0   | 0   | 1   | 0
+    0   | 1   | 0   | 1
+    0   | 1   | 1   | 0
+    1   | 0   | 0   | 1
+    1   | 0   | 1   | 0
+    1   | 1   | 0   | 0
+    1   | 1   | 1   | 0
+
+    Draw a synchronous sequential circuit that has this characteristic table.
+    *Hint:* If you are not sure where to start,
+    pretend that `X` has nothing to do with `Xnext`.
+    That is, assume it is just an input `C`.
+    Then, draw the corresponding combinational circuit.
+    From there, it is a small change to make the circuit synchronous sequential.
+
+19. Consider the following characteristic table:
+
+    A | X | Y | Xnext | Ynext
+    --- | --- | --- | --- | --- |
+    0 | 0 | 0 | 0 | 0
+    0 | 0 | 1 | 0 | 0
+    0 | 1 | 0 | 1 | 0
+    0 | 1 | 1 | 1 | 0
+    1 | 0 | 0 | 1 | 1
+    1 | 0 | 1 | 1 | 1
+    1 | 1 | 0 | 0 | 1
+    1 | 1 | 1 | 0 | 0
+
+    Draw a synchronous sequential circuit that has this characteristic table.
+    The same hint as above applies here, but with both bits of state.
+
+20. If you are in the morning section, you can skip this question
+    (or, if you have extra time after completing the remaining problems,
+    design this circuit for additional practice).
+    For the afternoon section, this was the original question 17.
 
     A | X | Y | Xnext | Ynext
     --- | --- | --- | --- | --- |
@@ -110,24 +165,30 @@
     1 | 1 | 1 | 0 | 0
 
     Draw a synchronous sequential circuit that has this characteristic table.
-    *Hint:* If you are not sure where to start,
-    pretend that `X` and `Y` have nothing to do with `Xnext` and `Ynext`.
-    That is, assume they are just inputs `B` and `C`.
-    Then, draw the corresponding combinational circuit.
-    From there, it is a small change to make the circuit synchronous sequential.
 
-18. Consider a circuit corresponding to the table above.
+21. Afternoon section only --
+    consider a circuit corresponding to the table above
+    (question 20).
     Draw the timing diagram for the circuit in the following scenario.
 
     * The initial inputs and state are `(0, 0, 0)`
     * The value of `A` is held fixed at `0` for the first three clock ticks,
       then switches to `1`
 
-19. Create a characteristic table for the circuit pictured below.
+22. Morning section only --
+    consider a circuit corresponding to the table above
+    (question 19).
+    Draw the timing diagram for the circuit in the following scenario.
+
+    * The initial inputs and state are `(1, 0, 1)`
+    * The value of `A` is held fixed at `1` for the first three clock ticks,
+      then switches to `1`
+
+23. Create a characteristic table for the circuit pictured below.
 
     ![synchronous circuit 1](images/synchronous_example_1.jpg)
 
-20. Consider the following scenario.
+24. Consider the following scenario.
     A golfer will hit a good shot if it is sunny and there is no wind.
     They will hit a bad shot any time there is wind.
     If it is not sunny and there is no wind,
@@ -139,7 +200,7 @@
 
     Draw a characteristic table describing the golfer's behavior.
 
-21. Draw a circuit corresponding to the situation above.
+25. Draw a circuit corresponding to the situation above.
 
-22. Choose some initial state and some values for the inputs and draw a timing
+26. Choose some initial state and some values for the inputs and draw a timing
     diagram for the golfer's behavior.
