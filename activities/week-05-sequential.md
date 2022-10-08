@@ -182,7 +182,7 @@ creating a synchronous sequential circuit.
 
     * The initial inputs and state are `(1, 0, 1)`
     * The value of `A` is held fixed at `1` for the first three clock ticks,
-      then switches to `1`
+      then switches to `0`
 
 23. Create a characteristic table for the circuit pictured below.
 
