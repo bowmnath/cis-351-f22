@@ -133,13 +133,48 @@ instructions.
     * How could you have known the instruction was R-type if I did not tell
       you?
 
+Consider the MIPS R-type datapath from lecture, copied below.
+
+![R-type datapath](images/r_type.jpg)
+
+16. Try to pick out any differences between this diagram and the one above for
+    the simplified computer.
+    Explain why those differences exist or what they tell us about the
+    different architectures being implemented.
+
+17. Find the bus between `RD1` on the register file and `In1` on the ALU.
+    Then, find the bus going into `R1` on the register file.
+    Do they have the same width (i.e., same number of bits)?
+    Why or why not?
+
+18. You decide you want a button on your computer that makes it skip every
+    other instruction
+    (or, in other words, advance by two instructions)
+    for as long as you are holding the button.
+    Assume this button is represented as a one-bit input pin named `button`
+    on the diagram.
+
+    Where and how would you hook up this input pin in the diagram,
+    possibly with some additional gates,
+    in order to accomplish what you want?
+    * Hint: if you aren't sure how to get started,
+      try to figure out roughly which section of the circuit you
+      would be modifying and/or which existing components would be involved.
+
 <!--
 15. We have seen that computer instructions are really just numbers.
 Explain in your own words how we can use this fact to make a computer that runs
 automatically.
 -->
 
-16. For each of the following I-type instructions,
+19. We may not have discussed this kind of instruction in assembly yet,
+    but can you think of any reason why it would be helpful for the computer
+    to sometimes move to a different instruction rather than proceeding to the
+    one directly after it in memory?
+    Try to think of a case where something like this happens in high-level
+    (non-assembly) code.
+
+20. For each of the following I-type instructions,
     indicate whether the immediate is signed or unsigned.
     * `addi`
     * `andi`
@@ -147,6 +182,6 @@ automatically.
     * `slti`
     * `beq`
 
-17. Explain why knowing the opcode is sufficient to identify a particular
+21. Explain why knowing the opcode is sufficient to identify a particular
     I-type instruction but insufficient to identify a particular R-type
     instruction.
