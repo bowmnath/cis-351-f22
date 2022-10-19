@@ -101,41 +101,51 @@ L2:
 
     Explain why or why not.
 
-
-14. Write the following in assembly.
-    ```python
-    x = 8
-    if x < 10:
-        y = 5
-    else:
-        y = 6
-    ```
-
-<!--
 For the next few questions, consider the following diagram.
 
 ![R, I, and branch datapath](images/i_r_beq_type.png)
 
+14. How many bits does the bus from the `zero` output of the ALU carry?
+    What value is output from `zero` in each of the following instructions?
+    * `addi $t1, $0, 7`
+    * `sub $t3, $t2, $t2`
+
+15. Explain the purpose of the new mux to the left of the program counter.
+    Under what conditions does the selector to that mux have a value of `1`?
+
+16. Your lab partner claims that the value of the `RegDst` control wire does
+    not matter if the current instruction is `beq`.
+    Are they correct? Why or why not?
+
+17. Where does the second input to the ALU (`In2`) come from in a `beq`
+    instruction?
+    Why do we need that value?
+
 18. If the sign-extender were replaced with a zero-extender,
-    how would it affect
+    how would it affect (if at all) the following instructions:
     * addi?
     * add?
     * branch?
 
-19. If the `sll` shifted by 3 instead of 2, what would instruction(s) would the
-    change affect?
+19. If the `sll_2` shifted by 3 instead of 2,
+    what would instruction(s) would the change affect?
     How would it change them?
     Give any upsides or downsides.
-
 
 20. Modify the circuit to include a `bne` instruction as well as a `beq`
     instruction.
     You may add new control wires if needed.
+    (Hint: remember our general process for adding new instructions.)
 
 21. Give an example of an instruction that would not work if the `RegWrite`
     flag were not present
     (i.e., if the register file were always writable).
 
+22. Open up the
+[assembly and memory handout](/misc/assembly-and-memory.pdf)
+and work through as much as you can.
+
+<!--
 22. As a first step toward moving to a 64-bit architecture,
     the designers of MIPS decide to move to 64-bit instructions that simply
     include padding (`0`s) as the last 32 bits and leave everything else about
@@ -170,6 +180,7 @@ For the next few questions, consider the following diagram.
     sub $19 $8 $7  # A
     j goelsewhere
     ```
+
 29. The current value of `$PC` is `0x000498c`.
     If the current instruction is a jump instruction,
     is there anywhere it *cannot* jump to?
