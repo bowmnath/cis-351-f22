@@ -153,12 +153,17 @@ and work through as much as you can.
     What change(s) would need to be made to the diagram to support this new
     format?
     (Hint: It's not much.)
+-->
 
 23. Why is this not a valid MIPS instruction: `addi $t0, $t1, 65500`?
 
 24. If I want to get the number `0x03510000` into a register,
     how can I do that in three instructions or fewer in MIPS?
+    (Hint: look up `lui` if you are not sure what that instruction does.)
 
+25. In the diagram above, fill in all values that you know for the instruction
+    `beq $5 $4 gohere`.
+<!--
 25. If I want to get the number `0x03510452` into a register,
     how can I do that in three instructions or fewer in MIPS?
 
