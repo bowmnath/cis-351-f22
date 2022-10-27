@@ -1,11 +1,19 @@
 # General Questions
 
-For the first few questions,
+For the first few questions, consider the instruction `lw $t0, 4($s1)`.
+
+1. What is the memory address that is being read and where is the data from
+   that address being written?
+
+2. Are there any restrictions on the value in `$s1` for this instruction to
+   run successfully?
+
+For the next few questions,
 consider the MIPS microarchitecture from your textbook.
 
    ![mips microarchitecture](images/mips-full-microarchitecture.png)
 
-1. Consider the instruction `lw $s0, 4($t0)`.
+3. Consider the instruction `lw $s0, 4($t0)`.
    In words, what is the value on the `ALUResult` line for this instruction?
    You do not need to go through the entire diagram to figure this out.
    Consider that one wire, and ask yourself where it is coming from
@@ -13,13 +21,13 @@ consider the MIPS microarchitecture from your textbook.
    or where it is going
    (i.e., what is the `A` input of `Data Memory` for a `lw` instruction).
 
-2. Consider the instruction `lw $s0, 4($t0)` again.
+4. Consider the instruction `lw $s0, 4($t0)` again.
    Does the `WriteData` line have any *useful* data on it for this instruction?
    How do you know?
    If so, describe where the data comes from.
    If not, try to figure out what non-useful data would be on that wire.
 
-3. Consider the instruction `sw $s0, 4($t1)`.
+5. Consider the instruction `sw $s0, 4($t1)`.
    For each of the following parts of the circuit,
    decide whether it is useful or not useful for this instruction:
    * the ALU
@@ -27,17 +35,18 @@ consider the MIPS microarchitecture from your textbook.
    * the left-shifter (denoted `<<2`)
    * the mux with `MemtoReg` as its control line
 
-4. Circle or highlight the parts of the circuit responsible for moving from
+6. Circle or highlight the parts of the circuit responsible for moving from
    one instruction to the next assuming we are *not* branching or jumping.
 
-5. What is the value of `MemtoReg` for each of the following instructions?
+7. What is the value of `MemtoReg` for each of the following instructions?
    Write an `X` if the value does not matter.
    * `lw`
    * `add`
    * `addi`
    * `bne`
 
-6. The instructions above have the following opcodes:
+<!--
+8. The instructions above have the following opcodes:
    * `lw` -- `100011`
    * `add` -- `000000`
    * `addi` -- `001000`
@@ -133,3 +142,4 @@ addr       | data
         j loop
     done:
     ```
+-->
