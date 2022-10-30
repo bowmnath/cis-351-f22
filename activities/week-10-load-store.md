@@ -45,7 +45,6 @@ consider the MIPS microarchitecture from your textbook.
    * `addi`
    * `bne`
 
-<!--
 8. The instructions above have the following opcodes:
    * `lw` -- `100011`
    * `add` -- `000000`
@@ -57,6 +56,53 @@ consider the MIPS microarchitecture from your textbook.
    Assume that any `X` above is treated as a `0`
    (though this is not necessarily the case in a real circuit.)
 
+   If you are having trouble knowing where to start,
+   bear in mind the following things:
+   * this is just combinational circuit design --
+     use any tools you know related to that
+   * carefully consider what the inputs and outputs are for the combinational
+     circuit you are designing
+   * your answer the the previous question will be very relevant to this one
+
+For the next few questions,
+we are going to consider how the clock affects the microarchitecture.
+Note that any specific times given in the questions are made up and may not
+even reflect the relative order of time delay of the various circuit
+components.
+
+9. Which elements in the diagram above are connected to a clock?
+   For each element you list, explain why it must be connected to the clock
+   (or, in other words, what would go wrong if the element were not connected
+   to the clock?)
+
+10. Consider a `lw` instruction.
+    Assume it takes
+    * 10 nanoseconds total to read from registers and compute a sum
+    * 20 nanoseconds to read from memory
+    * 5 nanoseconds to write a value to a register
+    * 10 nanoseconds to compute `PC + 4`
+
+    How long must the clock period be for the circuit to run `lw` safely?
+    (Hint: Remember the idea of a *critical path* --
+    not everything listed above is necessarily relevant.)
+
+11. Consider an `add` instruction,
+    and make the same assumptions about timings as given above.
+    How long must the clock period be for the circuit to run `add` safely
+    (disregarding `lw`)?
+
+12. Given your answers to the previous two questions,
+    what must the clock period be set to in order for the circuit to run
+    correctly given that it implements both instructions?
+
+13. If computing a branch target takes 15 nanoseconds total,
+    does including the `beq` instruction
+    * increase the required clock period,
+    * decrease the required clock period, or
+    * not affect the required clock period
+    given that `add` and `lw` are both implemented?
+
+<!--
 For the next few questions,
 consider the array `[7, 99, 14, 12]` with base address `0x10004000`
 as pictured below.
