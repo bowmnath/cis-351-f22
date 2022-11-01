@@ -102,7 +102,6 @@ components.
     * not affect the required clock period
     given that `add` and `lw` are both implemented?
 
-<!--
 For the next few questions,
 consider the array `[7, 99, 14, 12]` with base address `0x10004000`
 as pictured below.
@@ -118,16 +117,82 @@ addr       | data
 0x10004000 |   7
 ```
 
-7. Assume the base address is loaded into `$t4`.
-   Write assembly code demonstrating two ways you could access `array[2]` in
-   MIPS.
-   *Hint*: One of the ways will require just one command,
-   and the other will require more.
+14. Assume the base address is loaded into `$t4`.
+    Write assembly code demonstrating two ways you could access `array[2]` in
+    MIPS.
+    *Hint*: One of the ways will require just one command,
+    and the other will require more.
 
-8. Assume the base address is loaded into `$t4`.
-   Write assembly code to store the value 24 in `array[3]`.
-   There are several ways to accomplish this.
+15. Assume the base address is loaded into `$t4`.
+    Write assembly code to store the value 24 in `array[3]`.
+    There are several ways to accomplish this.
 
+16. Consider the code below.
+    You do not need to particularly worry about what the function does
+    (it's nothing generally useful).
+    ```
+    addi $a0, $0, 1
+    addi $a1, $0, 5
+    addi $s0, $0, 7
+    addi $s1, $0, 12
+    # Point A
+    jal fun
+    # Point C
+
+    ...
+
+    fun:
+        addi $sp, $sp, -8
+        sw $s0, 0($sp)
+        sw $s1, 4($sp)
+
+        addi $s0, $a0, 2
+        addi $s1, $a1, 1
+
+        # Point B
+
+        sub $v0, $s0, $s1
+
+        lw $s1, 4($sp)
+        lw $s0, 0($sp)
+        addi $sp, $sp, 8
+        jr $ra
+    ```
+
+    Assume the stack pointer starts at `$sp = 0x6FFFFFFC`.
+    In the diagram below,
+    fill in the contents of memory at the three marked points in the code.
+    If the contents are unknown, simply enter an `X`.
+
+    Note that in the diagram,
+    "memory location" means "the word starting at memory location."
+    ```
+    | memory location | A    | B    | C    |
+    |  0x6FFFFFFC     |      |      |      |
+    |  0x6FFFFFF8     |      |      |      |
+    |  0x6FFFFFF4     |      |      |      |
+    |  0x6FFFFFF0     |      |      |      |
+    |  0x6FFFFFEC     |      |      |      |
+    |  0x6FFFFFE8     |      |      |      |
+    |  0x6FFFFFE4     |      |      |      |
+    |  0x6FFFFFE0     |      |      |      |
+    ```
+
+17. The following function does not preserve registers correctly.
+    Modify it so that it does.
+
+    ```
+    fun:
+        addi $s0, $0, 8
+        addi $t1, $0, 4
+
+        slt $t4, $a0, $s0
+        slt $t5, $t1, $a0
+        and $v0, $t4, $t5
+
+        jr $ra
+    ```
+<!--
 9. Would writing general functions be possible without the `jal` instruction?
    If not, explain why not. If so, explain how.
 
