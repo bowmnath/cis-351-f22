@@ -127,7 +127,10 @@ addr       | data
     Write assembly code to store the value 24 in `array[3]`.
     There are several ways to accomplish this.
 
-16. Consider the code below.
+16. Would writing general functions be possible without the `jal` instruction?
+    If not, explain why not. If so, explain how.
+
+17. Consider the code below.
     You do not need to particularly worry about what the function does
     (it's nothing generally useful).
     ```
@@ -178,7 +181,7 @@ addr       | data
     |  0x6FFFFFE0     |      |      |      |
     ```
 
-17. The following function does not preserve registers correctly.
+18. The following function does not preserve registers correctly.
     Modify it so that it does.
 
     ```
@@ -193,9 +196,6 @@ addr       | data
         jr $ra
     ```
 <!--
-9. Would writing general functions be possible without the `jal` instruction?
-   If not, explain why not. If so, explain how.
-
 10. The function `bar` is intended to add up the results of three other function
     calls.
     The code does not work correctly.
