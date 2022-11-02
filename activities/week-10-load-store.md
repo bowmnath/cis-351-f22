@@ -195,8 +195,8 @@ addr       | data
 
         jr $ra
     ```
-<!--
-10. The function `bar` is intended to add up the results of three other function
+
+19. The function `bar` is intended to add up the results of three other function
     calls.
     The code does not work correctly.
     It results in an infinite loop (among other problems).
@@ -214,7 +214,7 @@ addr       | data
         jr $ra
     ```
 
-11. Would the following function implementation and corresponding call work
+20. Would the following function implementation and corresponding call work
     correctly?
     If not, why not?
     If so, is it a good implementation?
@@ -230,7 +230,7 @@ addr       | data
         jr $ra
     ```
 
-12. The following code does not work.
+21. The following code does not work.
     Why? What would happen if it were run?
     (Note that the comments explain what the code is *supposed* to do,
     not necessarily what it actually does.)
@@ -253,4 +253,3 @@ addr       | data
         j loop
     done:
     ```
--->
