@@ -253,3 +253,15 @@ addr       | data
         j loop
     done:
     ```
+
+22. Consider the simple pseudocode below.
+    Assuming local variables are allocated a spot in memory,
+    write (brief) assembly code showing how they would be allocated.
+    You do not need to write the entire function.
+
+    ```
+    fun addsub(x, y):
+        int a = x*2
+        int b = y + 5
+        return a - b
+    ```
