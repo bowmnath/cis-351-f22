@@ -1,43 +1,28 @@
 # General Questions
 
-1. The following function does not preserve registers correctly.
-   Modify it so that it does.
-
-   ```
-   fun:
-        addi $s0, $0, 8
-        addi $t1, $0, 4
-
-        slt $t4, $a0, $s0
-        slt $t5, $t1, $a0
-        and $v0, $t4, $t5
-
-        jr $ra
-   ```
-
-2. A compiler takes high-level code and converts it to assembly code.
+1. A compiler takes high-level code and converts it to assembly code.
    Given how close assembly code is to machine code,
    what useful purpose(s) does the assembler serve?
    (You have likely never called an assembler directly --
    your compiler calls it for you.)
 
-3. What is a `syscall` in MIPS?
+2. What is a `syscall` in MIPS?
    Give two examples of things you can do with a `syscall`.
 
-4. The instruction `li` is actually a pseudo-instruction --
+3. The instruction `li` is actually a pseudo-instruction --
    it is not part of the architecture,
    but it is converted to a "real" instruction for you.
-   Give the real instruction equivalent to the following:
+   Give a possible real instruction equivalent to the following:
    `li $t0, 8`.
-   (Hint: you can check in MARS if you are not sure.)
+   (Hint: you can check in MARS if you want to know what it actually does.)
 
-5. The base address of an array is stored in `$t0`.
+4. The base address of an array is stored in `$t0`.
    How does the process of accessing the second element array change,
    if at all,
    depending on whether the array is on the stack, the heap, or in global
    memory?
 
-6. Consider the setup below.
+5. Consider the setup below.
    Write code to swap the values of `a` and `b`.
    Your code does not need to be in a function.
    ```
@@ -50,12 +35,9 @@
         # your code here
    ```
 
-7. Consider the setup below.
+6. Consider the setup below.
    This time, the value of `b` was stored on the stack.
    Write code to swap the values of `a` and `b`.
-   Note that in this case,
-   you code would need to occur before `fun` returns.
-   Otherwise, `b` will have been removed from the stack.
    ```
    .data
 
@@ -70,6 +52,10 @@
 
         ... # add code here
    ```
+
+7. In the previous question,
+   your code would need to occur before `fun` returns.
+   Why?
 
 8. The code below does not do what the comments suggest.
    How would you fix the code to match the comments?
@@ -110,9 +96,8 @@
    notbase:
         # your code here
    ```
+<!--
 10. Describe in your own words what a cache is.
-   <!-- Small, fast memory where we hold data we expect we will need in the
-   near future. -->
 
 11. How, if at all, does the use of a cache change
     * the results of a program?
@@ -177,5 +162,7 @@
    technologies.
 -->
 
+<!--
 20. Start working on the
     [direct-mapped cache handout](/handouts/direct-cache-handout.pdf).
+-->
