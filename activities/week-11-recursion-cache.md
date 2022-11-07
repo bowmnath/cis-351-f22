@@ -22,7 +22,42 @@
    depending on whether the array is on the stack, the heap, or in global
    memory?
 
-5. Consider the setup below.
+5. Consider the C code below:
+   ```c
+   int a;
+
+   int main() {
+        ...
+        int* b = malloc(sizeof(int)*10);
+        ...
+        int c = 4;
+    }
+    ```
+
+    Then, consider the following assembly code:
+    ```
+    .data
+        x: .word
+    .text
+
+    ...
+    main:
+        addi $sp, $sp, -4
+        ...
+
+        syscall
+        addi $t0, $v0, 0
+
+        ...
+    ```
+
+    How do the variables in the high-level code correspond to the assembly
+    code?
+    In other words, we've created space for three variables in the assembly
+    code above.
+    Which space corresponds to which high-level variable?
+
+6. Consider the setup below.
    Write code to swap the values of `a` and `b`.
    Your code does not need to be in a function.
    ```
@@ -35,7 +70,7 @@
         # your code here
    ```
 
-6. Consider the setup below.
+7. Consider the setup below.
    This time, the value of `b` was stored on the stack.
    Write code to swap the values of `a` and `b`.
    ```
@@ -53,11 +88,11 @@
         ... # add code here
    ```
 
-7. In the previous question,
+8. In the previous question,
    your code would need to occur before `fun` returns.
    Why?
 
-8. The code below does not do what the comments suggest.
+9. The code below does not do what the comments suggest.
    How would you fix the code to match the comments?
 
    ```
@@ -77,25 +112,25 @@
         lw $t2, 0($t1)
    ```
 
-9. Write a *recursive* function called `recpow` that takes a single integer
-   argument `n` and returns `2*recpow(n - 1)`.
-   Assume `recpow(1) = 1`.
-   For example,
-   `recpow(3) = 2*recpow(2) = 2*(2*(recpow(1))) = 2*(2*(1)) = 4`.
-   You may also assume that nobody will pass your function a number less than
-   1 (a poor assumption in practice).
+10. Write a *recursive* function called `recpow` that takes a single integer
+    argument `n` and returns `2*recpow(n - 1)`.
+    Assume `recpow(1) = 1`.
+    For example,
+    `recpow(3) = 2*recpow(2) = 2*(2*(recpow(1))) = 2*(2*(1)) = 4`.
+    You may also assume that nobody will pass your function a number less than
+    1 (a poor assumption in practice).
 
-   You can use the example base case below if you find it helpful.
-   ```
-   recpow:
-        li $t0, 1
-        bne $a0, $t0, notbase
-        li $v0, 1
-        jr $ra
+    You can use the example base case below if you find it helpful.
+    ```
+    recpow:
+         li $t0, 1
+         bne $a0, $t0, notbase
+         li $v0, 1
+         jr $ra
 
-   notbase:
-        # your code here
-   ```
+    notbase:
+         # your code here
+    ```
 <!--
 10. Describe in your own words what a cache is.
 
