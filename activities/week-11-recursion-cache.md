@@ -131,7 +131,6 @@
     notbase:
          # your code here
     ```
-<!--
 10. Describe in your own words what a cache is.
 
 11. How, if at all, does the use of a cache change
