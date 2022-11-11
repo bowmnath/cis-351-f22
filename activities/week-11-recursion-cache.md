@@ -131,32 +131,32 @@
     notbase:
          # your code here
     ```
-10. Describe in your own words what a cache is.
+11. Describe in your own words what a cache is.
 
-11. How, if at all, does the use of a cache change
+12. How, if at all, does the use of a cache change
     * the results of a program?
     * the performance of a program?
 
-12. Assume you own too many PC games to keep them all on your computer at once.
+13. Assume you own too many PC games to keep them all on your computer at once.
     At any given time,
     you have a subset of them downloaded that you can readily play.
     The other games are still available to you,
     but you need to download them before playing.
     Describe how this example relates to caches.
 
-13. In the scenario above,
+14. In the scenario above,
     you decide that keep the last ten games that you have played stored on
     your local machine.
     What idea from this class are you taking advantage of?
 
-14. In the scenario above,
+15. In the scenario above,
     whenever you decide you want to play a real-time strategy game,
     you download a few of your other real-time strategy games along with it
     even if you do not intend to play them today.
     What idea from this class are you taking advantage of?
     What possible downside could there be?
 
-15. You buy yourself a new gaming machine as a present for successfully passing
+16. You buy yourself a new gaming machine as a present for successfully passing
     CIS 351.
     This machine has a fast, small SSD and a slow, large hard disk.
     You still store 10 games on the SSD.
@@ -169,7 +169,7 @@
     What concept from caching are you taking advantage of with this new setup
     that you could not take advantage of before?
 
-16. You are programming a web interface for a popular sandwich shop, MIPSway.
+17. You are programming a web interface for a popular sandwich shop, MIPSway.
     You decide to include a user's last three orders as buttons that they can
     press to quickly reorder.
     Also, you set up the site so that whenever a user puts bacon and lettuce
@@ -178,13 +178,13 @@
     Explain why you may have made these choices using ideas from this class.
     (Hint: the answer is not just "caching.")
 
-17. Give an example of temporal locality in your daily life or in something
+18. Give an example of temporal locality in your daily life or in something
     you might program.
 
-18. Give an example of spatial locality in your daily life or in something
+19. Give an example of spatial locality in your daily life or in something
     you might program.
 
-19. Looking at the memory hierarchy,
+20. Looking at the memory hierarchy,
     (cheap) memory that we have a lot of is always slower than (expensive)
     memory that we do not have a lot of.
     Why are there no fast, cheap, and large options?
@@ -196,7 +196,5 @@
    technologies.
 -->
 
-<!--
-20. Start working on the
+21. Start working on the
     [direct-mapped cache handout](/handouts/direct-cache-handout.pdf).
--->
