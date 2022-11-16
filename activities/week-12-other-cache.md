@@ -44,33 +44,35 @@ a block size of 1 word (i.e., 4 bytes).
    case?
    Why or why not?
 
+<!--
 7. Associative caches generally reduce the number of conflicts that occur
    *even when they do not change the overall amount of information stored*.
    Can you think of an intuitive reason why?
+-->
 
-8. LRU (least-recently used) is an example of a replacement policy that could
+7. LRU (least-recently used) is an example of a replacement policy that could
    be used in an associative cache.
    Why does it not make sense to have a replacement policy for a direct-mapped
    cache?
    (It may be helpful to consider how you would describe in your own words what
    a replacement policy does -- it's purpose.)
 
-9. What big-picture idea that we have discussed in the context of caches would
+8. What big-picture idea that we have discussed in the context of caches would
    tell us that LRU is a good idea for a replacement policy?
    (Hint: what properties of data accesses make caches a good idea in the first
    place?)
 
-10. Give an advantage of pseudo-LRU over LRU.
-    Does the advantage grow or shrink as the cache becomes more associative?
+9. Give an advantage of pseudo-LRU over LRU.
+   Does the advantage grow or shrink as the cache becomes more associative?
 
-11. Which of the following would be most useful in exploiting spatial locality
+10. Which of the following would be most useful in exploiting spatial locality
     of data accesses?
     * increasing cache size
     * increasing block size
     * increasing associativity
 
-12. Work through the questions in the
+11. Work through the questions in the
     [caches and associativity handout](/handouts/associative-cache-handout.pdf)
 
-13. Try the not-for-credit cache activities posted to PL.
+12. Try the not-for-credit cache activities posted to PL.
     Repeat them a few times until you are comfortable.
