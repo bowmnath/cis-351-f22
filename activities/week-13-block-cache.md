@@ -47,6 +47,7 @@
    If so, how can this happen?
    If not, why not?
 
+<!--
 7. Try the not-for-credit cache activities posted to PL.
    Repeat them a few times until you are comfortable.
 
@@ -139,3 +140,4 @@
     If we were to slow down the ALU slightly,
     would this affect the throughput of the processor?
     Why or why not?
+-->

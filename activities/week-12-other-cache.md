@@ -71,8 +71,10 @@ a block size of 1 word (i.e., 4 bytes).
     * increasing block size
     * increasing associativity
 
+<!--
 11. Work through the questions in the
     [caches and associativity handout](/handouts/associative-cache-handout.pdf)
 
 12. Try the not-for-credit cache activities posted to PL.
     Repeat them a few times until you are comfortable.
+-->
