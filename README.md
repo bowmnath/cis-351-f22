@@ -53,4 +53,5 @@ contact information, and other important info.
 
 ## Useful links
 
-[MIPS Reference Sheet](https://uweb.engr.arizona.edu/~ece369/Resources/spim/MIPSReference.pdf)
+* [MIPS Reference Sheet](https://uweb.engr.arizona.edu/~ece369/Resources/spim/MIPSReference.pdf)
+* [Prof. Kurmas's Videos](https://www.youtube.com/playlist?list=PLhCl0ln3o55z3HXfnOvtqEQSw0f1qgAzQ)
