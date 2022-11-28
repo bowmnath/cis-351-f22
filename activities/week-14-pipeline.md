@@ -20,16 +20,18 @@
    tape,
    how long will it take you to wrap 1 present?
    5 presents?
-   (For this question and the next one,
+   (For this question,
    assume the time to hand the present from one person to the next can be
    ignored.)
    It will likely be very helpful to draw a diagram like the ones used in
    lecture to help figure out the time.
 
+<!--
 4. If instead it takes 10 seconds to cut, 30 seconds to wrap,
    and 5 seconds to tape,
    does this change the total time to wrap 1 present?
    5 presents?
+-->
 
 5. Consider the same scenario,
    except you have three pairs of scissors,
@@ -54,8 +56,8 @@
      Instead, think about the long-term pattern you would observe in terms of
      pipelining.)
 
-   If you drew diagrams to help answer the above questions,
-   it may be insightful to figure out how the diagrams would change.
+   If you drew a diagram to help answer the above question,
+   it may be insightful to figure out how the diagram would change.
 
 7. Come up with a real-life example of pipelining that you might see
    (it doesn't need to be anything practical,
