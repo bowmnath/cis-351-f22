@@ -91,7 +91,7 @@
 
 11. Consider the image above.
     Explain what is happening in the Execute stage of the pipeline during
-    cycle 5 (with cycles numbered from 0).
+    cycle 5.
     For example, which instruction is in that stage,
     what are the operands to the ALU,
     how are the control wires set,
