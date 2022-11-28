@@ -23,6 +23,8 @@
    (For this question and the next one,
    assume the time to hand the present from one person to the next can be
    ignored.)
+   It will likely be very helpful to draw a diagram like the ones used in
+   lecture to help figure out the time.
 
 4. If instead it takes 10 seconds to cut, 30 seconds to wrap,
    and 5 seconds to tape,
