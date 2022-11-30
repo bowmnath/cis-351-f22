@@ -139,3 +139,71 @@ consider either or both of the images above.
     think about what determines the long-term throughput of the processor.)
 
     What about latency?
+
+18. A bank needs to manage money transfers.
+    Each time a customer wants to transfer money,
+    the customer submits a requested on a printed card, such as
+    ```
+    From: XXX account
+    To: YYY account
+    Amount: ZZZ$
+    ```
+    There is a large stack of these at the end of the day,
+    so the bank employees try to speed up the processing by "pipelining"
+    the work.
+    * Employee 1 looks up the `From` account and
+      verifies that the current balance is enough to cover the transfer amount.
+      They write the current balance down and pass it to the next employee.
+    * Employee 2 looks up to `To` account and determines which bank the money
+      will be transferred to.
+      They write this information down and pass it
+      (along with the current balance)
+      to the next employee.
+    * Employee 3 takes the information from the previous employees,
+      increases the balance for the `To` account and decreases the balance for
+      the `From` account.
+
+    Pipelining the work in this way can result in a very serious error for
+    the bank.
+    What is the problem that can occur?
+    (Hint: a single customer may make more than one transfer in a day.)
+
+19. The above problem would be called a "hazard" in pipelining terms.
+    How can the bankers continue to use pipelining but change their process so
+    that the issue you found in the previous question does not occur?
+    (Hint: consider how hazards are solved in a CPU pipeline and apply similar
+    ideas to this scenario.)
+
+20. Identify any data hazards in the code below.
+    ```
+    add $t0 $t1 $t2
+    add $t1 $t2 $t3
+    add $s0 $t0 $t3
+    ```
+
+21. If you solve the hazard(s) above by forwarding,
+    which stages will you be forwarding from and forwarding to?
+
+22. Is it ever possible that a single instruction will need to have *two*
+    operands forwarded to it?
+    If so, explain how this could happen or give a small code example where it
+    would be necessary.
+    If not, explain why not.
+
+23. Give the values stored in `$t0`, `$t1`, and `$t2` at the end of the
+    following code snippet assuming
+    * the code is run on a processor that correctly implements data forwarding.
+    * the code is run on a processor that does not implement data forwarding.
+
+    Why do you think I added the `addu` statements to the end?
+    ```
+    # $t0 holds the value 50
+    # $t1 holds the value 40
+    addi $t0 $t0 1
+    addi $t1 $t0 1
+    slt $t2 $t0 $t1
+    addu $0 $0 $0
+    addu $0 $0 $0
+    addu $0 $0 $0
+    addu $0 $0 $0
+    ```
