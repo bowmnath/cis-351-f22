@@ -49,7 +49,7 @@ contact information, and other important info.
 |  13  | Cache performance<br>[cache performance](slides/cache-performance.pdf) | [In-class Activities](activities/week-13-block-cache.md) | Fourth Midterm -- Tuesday, November 22<br><br>[Computer Instruction Types lab](https://www.prairielearn.org/pl/course_instance/129541/assessment/2323441) -- Tuesday, November 22 (recommended) |
 |  14  | Basic pipelining in MIPS<br>[pipeline intro](slides/micro-pipeline-intro.pdf)<br>[pipeline performance](slides/micro-pipeline-performance.pdf) | [In-class Activities](activities/week-14-pipeline.md) | [HW6: Cache](https://www.prairielearn.org/pl/course_instance/129541/assessment/2323500) -- Friday, Dec. 2 (recommended) |
 |  15  | Data and Control Hazards<br>[data hazards](slides/pipeline-hazards-data.pdf)<br>[control hazards](slides/pipeline-hazards-control.pdf) | | [Cache Lab](https://www.prairielearn.org/pl/course_instance/129541/assessment/2323602) -- Tuesday, December 6 (Recommended)<br><br>Pipeline lab |
-|  16  | **Final Exam** | | |
+|  16  | **Final Exam**<br><br>8 AM section -- **Monday, Dec. 12 @ 8-9:50 AM in EOS**<br><br>4 PM section -- **Wednesday, Dec. 14 @ 4-5:50 PM in EOS** | ||
 
 ## Useful links
 
