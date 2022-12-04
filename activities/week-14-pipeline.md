@@ -175,6 +175,7 @@ consider either or both of the images above.
     ideas to this scenario.)
 
 20. Identify any data hazards in the code below.
+    Determine whether any hazards you find can be solved via forwarding.
     ```
     add $t0 $t1 $t2
     add $t1 $t2 $t3

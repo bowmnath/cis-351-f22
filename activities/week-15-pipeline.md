@@ -1,19 +1,6 @@
 # General Questions
 
-For all questions below involving code,
-assume the code is run on the five-stage MIPS pipeline as described in lecture.
-There is an image of the pipeline partway through the activities that you can
-use for reference if needed.
-
-1. Identify any data hazards in the code below.
-   Determine whether any hazards you find can be solved via forwarding.
-   ```
-   add $t0 $t1 $t2
-   add $t1 $t2 $t3
-   add $s0 $t0 $t3
-   ```
-
-2. Consider the two code snippets below.
+1. Consider the two code snippets below.
    Assume they are run independently of one another.
    For each snippet,
    determine whether it would require a stall to operate correctly and explain
@@ -32,25 +19,7 @@ use for reference if needed.
    addi $s4 $t6 $t7
    ```
 
-3. Give the values stored in `$t0`, `$t1`, and `$t2` at the end of the
-   following code snippet assuming
-   * the code is run on a processor that correctly implements data forwarding.
-   * the code is run on a processor that does not implement data forwarding.
-
-   Why do you think I added the `addu` statements to the end?
-   ```
-   # $t0 holds the value 50
-   # $t1 holds the value 40
-   addi $t0 $t0 1
-   addi $t1 $t0 1
-   slt $t2 $t0 $t1
-   addu $0 $0 $0
-   addu $0 $0 $0
-   addu $0 $0 $0
-   addu $0 $0 $0
-   ```
-
-4. The code below contains a data hazard that will result in a stall.
+2. The code below contains a data hazard that will result in a stall.
    Identify the hazard.
    Which instructions will end up spending more than 5 cycles in the pipeline
    due to the stall?
@@ -66,7 +35,7 @@ use for reference if needed.
    # ... code continues
    ```
 
-5. Draw a pipeline diagram
+3. Draw a pipeline diagram
    (the one that runs in a stair-step pattern with cycles along the horizontal
    axis and instructions along the vertical axis)
    showing how the previous instructions go through the pipeline.
@@ -77,7 +46,7 @@ use for reference if needed.
 
 ![pipelined processor with forwarding](images/pipelined-processor-forwarding.png)
 
-6. The third instruction below needs to have one of its operands forwarded
+4. The third instruction below needs to have one of its operands forwarded
    from a previous instruction.
    In the image above,
    highlight the part of the data path showing how the forwarding happens for
@@ -88,7 +57,7 @@ use for reference if needed.
    add $t0 $t0 $t2
    ```
 
-7. For each instruction below,
+5. For each instruction below,
    determine where the operands to the ALU will come from during that
    instruction's Execute stage
    (i.e., determine `ForwardAE` and `ForwardBE` in the diagram above).
@@ -103,7 +72,7 @@ use for reference if needed.
 
 ![pipelined processor](images/pipelined-processor.png)
 
-8. Consider the image above.
+6. Consider the image above.
    In which stage is the decision about whether to branch made in this version
    of the CPU?
    For how many instructions would the pipeline need to stall if it did not
@@ -115,7 +84,7 @@ use for reference if needed.
 
 ![pipelined processor with branch prediction](images/pipelined-processor-final.png)
 
-9. Consider the image above.
+7. Consider the image above.
    In which stage is the decision about whether to branch made in this version
    of the CPU?
    For how many instructions would the pipeline need to stall if it did not
@@ -125,34 +94,34 @@ use for reference if needed.
    (i.e., how many cycles are wasted if we "guess wrong" about whether to
    branch)?
 
-10. Consider a pipelined CPU where the branch prediction was not made until the
-    Writeback stage.
-    Such a processor could not safely use branch prediction --
-    it would need to stall until the decision about whether to branch had been
-    made.
-    This is because if the processor tried to perform branch prediction,
-    it might change program state
-    (contents of memory or registers)
-    in an undesirable way.
-    Why might this occur?
-    (Hint: consider in which stages we change the contents of memory or
-    registers.)
+8. Consider a pipelined CPU where the branch prediction was not made until the
+   Writeback stage.
+   Such a processor could not safely use branch prediction --
+   it would need to stall until the decision about whether to branch had been
+   made.
+   This is because if the processor tried to perform branch prediction,
+   it might change program state
+   (contents of memory or registers)
+   in an undesirable way.
+   Why might this occur?
+   (Hint: consider in which stages we change the contents of memory or
+   registers.)
 
-11. Consider the following code snippet:
-    ```
-    beq $0 $0 foo
-    addi $t0 $t0 1
-    foo:
-    add $v0 $0 $t0
-    ...
-    ```
-    What is the next instruction that should occur after the `beq`?
-    If a pipelined processor is using branch prediction,
-    what is the next instruction that will be fetched after the `beq`
-    (i.e., which instruction is in the Fetch stage when `beq` is in the Decode
-    stage)?
+9. Consider the following code snippet:
+   ```
+   beq $0 $0 foo
+   addi $t0 $t0 1
+   foo:
+   add $v0 $0 $t0
+   ...
+   ```
+   What is the next instruction that should occur after the `beq`?
+   If a pipelined processor is using branch prediction,
+   what is the next instruction that will be fetched after the `beq`
+   (i.e., which instruction is in the Fetch stage when `beq` is in the Decode
+   stage)?
 
-12. Consider the following code:
+10. Consider the following code:
     ```
     addi $t0 $t1 1
     add $t2 $t3 $t4
@@ -165,17 +134,17 @@ use for reference if needed.
     what are the values going into `A1` and `A2` in the diagram above?
     (These are the two read inputs to the register file.)
 
-13. For the same code snippet,
+11. For the same code snippet,
     what value is going into `A3` during Cycle 4?
 
-14. Which type of code will generally suffer more from branch misdirection
+12. Which type of code will generally suffer more from branch misdirection
     penalties?
     * Code with many loops
     * Code with many conditionals
 
     Why?
 
-15. Consider the following code snippet.
+13. Consider the following code snippet.
     ```
     addi $t0 $t1 1
     beq $t0 $t1 foo
@@ -191,7 +160,7 @@ use for reference if needed.
     or about the same depending on whether the CPU uses branch prediction or
     stalling?
 
-16. Consider the following code snippet.
+14. Consider the following code snippet.
     ```
     addi $t0 $t1 0
     beq $t0 $t1 foo
